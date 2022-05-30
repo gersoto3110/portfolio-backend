@@ -5,12 +5,18 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.io.Serializable;
 
 @Getter
 @Setter
 @Entity
 public class Profile implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
     private String lastname;
     private String urlImgBanner;
@@ -23,4 +29,6 @@ public class Profile implements Serializable {
         this.urlImgBanner = urlImgBanner;
         this.about = about;
     }
+
+    public Profile() {}
 }

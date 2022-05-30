@@ -25,4 +25,6 @@ public class Skill implements Serializable {
         this.percentage = percentage;
         this.urlIcon = urlIcon;
     }
+
+    public Skill() {}
 }

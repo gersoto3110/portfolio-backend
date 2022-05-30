@@ -31,4 +31,6 @@ public class Experience implements Serializable {
         this.companyName = companyName;
         this.urlCompany = urlCompany;
     }
+
+    public Experience() {}
 }

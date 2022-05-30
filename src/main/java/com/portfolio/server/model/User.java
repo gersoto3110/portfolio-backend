@@ -30,6 +30,8 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public User() {}
+
     @Override
     public String toString() {
         return "User{ id= " + this.id + ", email= " + this.email + " }";

@@ -33,4 +33,6 @@ public class Education implements Serializable {
         this.endDate = endDate;
         this.description = description;
     }
+
+    public Education(){}
 }

@@ -33,4 +33,6 @@ public class Project implements Serializable {
         this.urlDemo = urlDemo;
         this.urlImg = urlImg;
     }
+
+    public Project() {}
 }
