@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins={"https://sv-web-portfolio.web.app", "http://localhost:4200"})
 @RequestMapping("/api/project")
 public class ProjectController {
     @Autowired

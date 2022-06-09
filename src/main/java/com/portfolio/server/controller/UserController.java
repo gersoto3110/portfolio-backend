@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins={"https://sv-web-portfolio.web.app", "http://localhost:4200"})
 @RequestMapping("/api/user")
 public class UserController {
     @Autowired
@@ -31,7 +32,7 @@ public class UserController {
         return userService.findById(id);
     }
 
-    @GetMapping("/find/{email}")
+    @GetMapping("/find-email/{email}")
     @ResponseBody
     public User findByEmail(@PathVariable("email") String email) {
         return userService.findByEmail(email);
