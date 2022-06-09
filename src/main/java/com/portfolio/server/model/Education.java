@@ -34,5 +34,14 @@ public class Education implements Serializable {
         this.description = description;
     }
 
+    public Education(Long id, String title, String institution, String startDate, String endDate, String description) {
+        this.id = id;
+        this.title = title;
+        this.institution = institution;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.description = description;
+    }
+
     public Education(){}
 }

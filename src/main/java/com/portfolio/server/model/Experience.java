@@ -32,5 +32,15 @@ public class Experience implements Serializable {
         this.urlCompany = urlCompany;
     }
 
+    public Experience(Long id, String rol, String startDate, String endDate, String description, String companyName, String urlCompany) {
+        this.id = id;
+        this.rol = rol;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.description = description;
+        this.companyName = companyName;
+        this.urlCompany = urlCompany;
+    }
+
     public Experience() {}
 }

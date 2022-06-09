@@ -18,15 +18,29 @@ public class Profile implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private String lastname;
+    private String lastName;
+    private String occupation;
     private String urlImgBanner;
+    private String urlImgProfile;
     @Column(name="ABOUT", length = 1000)
     private String about;
 
-    public Profile (String name, String lastname, String urlImgBanner, String about) {
+    public Profile (String name, String lastName, String occupation, String urlImgBanner, String urlImgProfile, String about) {
         this.name = name;
-        this.lastname = lastname;
+        this.lastName = lastName;
+        this.occupation = occupation;
         this.urlImgBanner = urlImgBanner;
+        this.urlImgProfile = urlImgProfile;
+        this.about = about;
+    }
+
+    public Profile (Long id, String name, String lastName, String occupation, String urlImgBanner, String urlImgProfile, String about) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.occupation = occupation;
+        this.urlImgBanner = urlImgBanner;
+        this.urlImgProfile = urlImgProfile;
         this.about = about;
     }
 

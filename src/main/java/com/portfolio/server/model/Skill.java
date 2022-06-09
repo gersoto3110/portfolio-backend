@@ -17,13 +17,20 @@ public class Skill implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private String percentage;
-    private String urlIcon;
+    private int percentage;
+    private String category;
 
-    public Skill(String name, String percentage, String urlIcon) {
+    public Skill(String name, int percentage, String category) {
         this.name = name;
         this.percentage = percentage;
-        this.urlIcon = urlIcon;
+        this.category = category;
+    }
+
+    public Skill(Long id, String name, int percentage, String category) {
+        this.id = id;
+        this.name = name;
+        this.percentage = percentage;
+        this.category = category;
     }
 
     public Skill() {}

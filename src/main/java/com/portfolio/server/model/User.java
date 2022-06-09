@@ -20,12 +20,17 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String email;
     @Basic
     private String password;
 
     public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public User(Long id, String email, String password) {
+        this.id = id;
         this.email = email;
         this.password = password;
     }
